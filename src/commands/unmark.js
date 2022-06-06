@@ -25,12 +25,10 @@ export default function unmark(str) {
             })
             
             fs.writeFile(filepath, JSON.stringify(newTodos), () =>{
-                console.log(`Todo ${str} marked as completed`)
+                console.log(`Todo ${str} marked as active`)
             })
         })
     })
 
 
 }
-
-// TODO CREATE MARK COMMAND

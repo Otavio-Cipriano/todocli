@@ -32,5 +32,3 @@ export default function mark(str) {
 
 
 }
-
-// TODO CREATE MARK COMMAND

@@ -28,5 +28,3 @@ export default function remove(str) {
         })
     })
 }
-
-// TODO CREATE MARK COMMAND

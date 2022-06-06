@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { program } from "commander";
 import add from "./commands/add.js";
+import clear from "./commands/clear.js";
 import list from "./commands/list.js";
 import mark from "./commands/mark.js";
 import remove from "./commands/remove.js";
@@ -39,5 +40,11 @@ program
 .description('Command to remove a todo')
 .argument('<string>', 'string to remove a todo from your list')
 .action(remove)
+
+program
+.command('clear')
+.description('Command to remove all complted todo')
+.action(clear)
+
 
 program.parse()
