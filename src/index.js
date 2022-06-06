@@ -3,6 +3,7 @@ import { program } from "commander";
 import add from "./commands/add.js";
 import list from "./commands/list.js";
 import mark from "./commands/mark.js";
+import unmark from "./commands/unmark.js";
 
 program
 .name('todo-cli')
@@ -25,5 +26,11 @@ program
 .description('Command to mark a todo as complete')
 .argument('<string>', 'string to add as a todo to your list')
 .action(mark)
+
+program
+.command('unmark')
+.description('Command to mark a todo as active')
+.argument('<string>', 'string to add as a todo to your list')
+.action(unmark)
 
 program.parse()
