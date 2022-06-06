@@ -3,6 +3,7 @@ import { program } from "commander";
 import add from "./commands/add.js";
 import list from "./commands/list.js";
 import mark from "./commands/mark.js";
+import remove from "./commands/remove.js";
 import unmark from "./commands/unmark.js";
 
 program
@@ -32,5 +33,11 @@ program
 .description('Command to mark a todo as active')
 .argument('<string>', 'string to add as a todo to your list')
 .action(unmark)
+
+program
+.command('remove')
+.description('Command to remove a todo')
+.argument('<string>', 'string to remove a todo from your list')
+.action(remove)
 
 program.parse()
