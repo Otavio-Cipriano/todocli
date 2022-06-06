@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename)
 
 export default function add(str) {
     let filepath = path.join(__dirname, '../data/todos.json')
-    let content = {id: uuidV4(),text: str, state: 'active'}
+    let content = {text: str, state: 'active'}
 
     fs.access(filepath, fs.constants.R_OK, (err) => {
         if (err && err.code === "ENOENT") {
@@ -22,7 +22,7 @@ export default function add(str) {
                     if (err) return console.log(err)
 
 
-                    return console.log(chalk.green.bold('Todo created!'))
+                    return console.log(chalk.green.bold('Todo created'))
                 })
             })
             return
@@ -39,7 +39,7 @@ export default function add(str) {
             fs.writeFile(filepath, JSON.stringify(newData), (err) => {
                 if (err) return console.log(err);
 
-                return console.log(chalk.green.bold('Todo created!'))
+                return console.log(chalk.green.bold('Todo created'))
             })
         })
     })
